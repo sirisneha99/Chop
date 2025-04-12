@@ -44,10 +44,10 @@ struct Task {
 
     // The date the task was created
     // This property is set as the current date whenever the task is initially created.
-    let createdDate: Date = Date()
+    private(set) var createdDate: Date = Date()
 
     // An id (Universal Unique Identifier) used to identify a task.
-    let id: String = UUID().uuidString
+    private(set) var id: String = UUID().uuidString
 }
 
 // MARK: - Task + UserDefaults
