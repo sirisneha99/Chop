@@ -23,8 +23,8 @@ The following **additional** features are implemented:
 
 - [X] Tasks can be toggled completed
 - [X] User can edit tasks by tapping on the task in the feed view
-- [ ] User can toggle tasks on  and off in both tabs - Task and Calendar
-- [ ] User can see the completed tasks in both tabs. Only the deleted tasks are not displayed
+- [X] User can toggle tasks on  and off in both tabs - Task and Calendar
+- [X] User can see the completed tasks in both tabs. Only the deleted tasks are not displayed
 
 ## Video Walkthrough
 
