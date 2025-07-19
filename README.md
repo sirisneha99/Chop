@@ -26,6 +26,15 @@ The following **additional** features are implemented:
 - [X] User can toggle tasks on  and off in both tabs - Task and Calendar
 - [X] User can see the completed tasks in both tabs. Only the deleted tasks are not displayed
 
+## App Screenshots
+
+<div align="center">
+  <img src="./sim1.png" alt="Home" width="180">
+  <img src="./sim2.png" alt="Profile" width="180">
+  <img src="./sim3.png" alt="Settings" width="180">
+</div>
+
+
 ## Video Walkthrough
 
 Loom link to project demo - https://www.loom.com/share/e48581d4ae6149a7a0e1a8072bbd6a4e?sid=3d0127ec-8080-49ab-94ab-9b085f130549 
