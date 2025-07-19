@@ -105,6 +105,8 @@ class CalendarViewController: UIViewController {
         super.viewWillAppear(animated)
 
         refreshTasks()
+       
+  
     }
 
     // MARK: - Helper Functions

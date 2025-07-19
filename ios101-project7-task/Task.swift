@@ -5,7 +5,7 @@
 import UIKit
 
 // The Task model
-struct Task {
+struct Task : Codable {
 
     // The task's title
     var title: String
@@ -52,25 +52,45 @@ struct Task {
 
 // MARK: - Task + UserDefaults
 extension Task {
-
+    
+    // Key used to store tasks in UserDefaults
+    static let tasksKey = "tasks"
 
     // Given an array of tasks, encodes them to data and saves to UserDefaults.
-    static func save(_ tasks: [Task]) {
-
-        // TODO: Save the array of tasks
+    static func save(_ tasks: [Task], forKey key: String = tasksKey) {
+        let defaults = UserDefaults.standard
+        let encodedData = try! JSONEncoder().encode(tasks)
+        defaults.set(encodedData, forKey: key)
     }
 
     // Retrieve an array of saved tasks from UserDefaults.
-    static func getTasks() -> [Task] {
+    static func getTasks(forKey key: String = tasksKey) -> [Task] {
+        let defaults = UserDefaults.standard
         
-        // TODO: Get the array of saved tasks from UserDefaults
-
-        return [] // 👈 replace with returned saved tasks
+        if let data = defaults.data(forKey: key) {
+            let decodedTasks = try! JSONDecoder().decode([Task].self, from: data)
+            return decodedTasks
+        } else {
+            return []
+        }
     }
 
     // Add a new task or update an existing task with the current task.
     func save() {
-
-        // TODO: Save the current task
+        // 1. Get the current array of saved tasks
+        var savedTasks = Task.getTasks()
+        
+        // 2. Check if current task already exists (by checking for matching id)
+        if let existingTaskIndex = savedTasks.firstIndex(where: { $0.id == self.id }) {
+            // 3. Update existing task - remove the old one and insert updated one at same position
+            savedTasks.remove(at: existingTaskIndex)
+            savedTasks.insert(self, at: existingTaskIndex)
+        } else {
+            // 4. Add new task to the end of the array
+            savedTasks.append(self)
+        }
+        
+        // 5. Save the updated tasks array back to UserDefaults
+        Task.save(savedTasks)
     }
 }
