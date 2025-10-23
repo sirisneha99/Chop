@@ -1,4 +1,4 @@
-# Project 7 - Chop
+Chop
 
 Submitted by: **Sneha Siri Nagabathula**
 
@@ -9,22 +9,20 @@ Time spent: **3** hours spent in total
 
 ## Required Features
 
-The following **required** functionality is completed:
+The following functionality is implemented:
 
-- [x] App displays a list of tasks
-- [X] Users can add tasks to the list
-- [X] Session persists when application is closed and relaunched (tasks dont get deleted when closing app) 
-  - [X] Note: You have to quit the app, not minimize it, in order to see the persistence.
-- [X] Tasks can be deleted
-- [X] Users have a calendar view via navigation controller that displays tasks	
+- App displays a list of tasks
+- Users can add tasks to the list
+-  Session persists when application is closed and relaunched (tasks dont get deleted when closing app) 
+-  asks can be deleted
+-  Users have a calendar view via navigation controller that displays tasks	
 
 
-The following **additional** features are implemented:
-
-- [X] Tasks can be toggled completed
-- [X] User can edit tasks by tapping on the task in the feed view
-- [X] User can toggle tasks on  and off in both tabs - Task and Calendar
-- [X] User can see the completed tasks in both tabs. Only the deleted tasks are not displayed
+The User can also : 
+-  Tasks can be toggled completed
+-  User can edit tasks by tapping on the task in the feed view
+-  User can toggle tasks on  and off in both tabs - Task and Calendar
+-  User can see the completed tasks in both tabs. Only the deleted tasks are not displayed
 
 ## App Screenshots
 
